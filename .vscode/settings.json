@@ -2,14 +2,17 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "files.associations": {
-    "*.html": "html"
+    "*.html": "django-html"
+  },
+  "emmet.includeLanguages": {
+    "django-html": "html"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
   "[django-html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "batisteo.vscode-django",
     "editor.formatOnSave": true
   },
   "[python]": {
