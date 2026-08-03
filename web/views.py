@@ -1,9 +1,14 @@
+import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, "index.html")
+    context = {
+        "title": "My Home Page",
+    }
+    context["date"] = datetime.date.today()
+    return render(request, "index.html", context)
 
 
 def about(request):
