@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Student
 
+
 def home(request):
     context = {
         "title": "My Home Page",
@@ -22,3 +23,11 @@ def about(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+
+def student_detail(request, pk):
+    student = Student.objects.get(pk=pk)
+
+    context = {"student": student}
+
+    return render(request, "student_detail.html", context)
